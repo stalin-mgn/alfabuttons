@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Альфакнопки</title>
+        <title>ГЂГ«ГјГґГ ГЄГ­Г®ГЇГЄГЁ</title>
         <meta charset="windows-1251" />
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/css.css" rel="stylesheet">
@@ -10,93 +10,94 @@
     </head>
     <body>
 	<img src="img/bg.jpg">
+		Text from GitHub for testing
 <!-- 
-	1) слой 2 выбирается пользователем и выбранные ячейки бронируются и не могут быть использованы слоем 3 
-	2) элементам слоя 2 присваивается уникальный id, например id="lvl2b1" где lvl2 - уровень, а b1-b400 - id кнопки. Также присваиваем класс однозначно указывающий на уровень 2 - lvl2
-	3) а) элементам слоя 3 присвается уникальный id, например id="lvl3b1" где lvl3 - уровень, а b1-b400 - id кнопки. Также присваиваем класс однозначно указывающий на уровень 3 - lvl3
-		б) элементам слоя 3 присвается data-parent="lvl2b1" где lvl2b1 - id родителя. Таким образом по клику на родителя можно однозначно выбрать его потомков
-	4) а) элементам слоя 4 присваивается уникальный id, например id="lvl4b1" где lvl2 - уровень, а b1-b400 - id кнопки. Также присваиваем класс однозначно указывающий на уровень 4 - lvl4
-		б) элементам слоя 4 присвается data-parent="lvl3b1" где lvl2b1 - id родителя. Таким образом по клику на родителя можно однозначно выбрать его потомков
-	5) при текущей сетке 16*29 мы имеем 464 ячейки
-	6) при клике на класс уровня 2:
-		а) вызываем функцию, которая считывает id кликнутого и среди элементов уровня 3 выбирает те у кого data-parent = считанному id 
-	7) при клике на класс уровня 3:
-		а) вызываем функцию, которая считывает id кликнутого и среди элементов уровня 4 выбирает те у кого data-parent = считанному id 
+	1) Г±Г«Г®Г© 2 ГўГ»ГЎГЁГ°Г ГҐГІГ±Гї ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«ГҐГ¬ ГЁ ГўГ»ГЎГ°Г Г­Г­Г»ГҐ ГїГ·ГҐГ©ГЄГЁ ГЎГ°Г®Г­ГЁГ°ГіГѕГІГ±Гї ГЁ Г­ГҐ Г¬Г®ГЈГіГІ ГЎГ»ГІГј ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ Г­Г» Г±Г«Г®ГҐГ¬ 3 
+	2) ГЅГ«ГҐГ¬ГҐГ­ГІГ Г¬ Г±Г«Г®Гї 2 ГЇГ°ГЁГ±ГўГ ГЁГўГ ГҐГІГ±Гї ГіГ­ГЁГЄГ Г«ГјГ­Г»Г© id, Г­Г ГЇГ°ГЁГ¬ГҐГ° id="lvl2b1" ГЈГ¤ГҐ lvl2 - ГіГ°Г®ГўГҐГ­Гј, Г  b1-b400 - id ГЄГ­Г®ГЇГЄГЁ. Г’Г ГЄГ¦ГҐ ГЇГ°ГЁГ±ГўГ ГЁГўГ ГҐГ¬ ГЄГ«Г Г±Г± Г®Г¤Г­Г®Г§Г­Г Г·Г­Г® ГіГЄГ Г§Г»ГўГ ГѕГ№ГЁГ© Г­Г  ГіГ°Г®ГўГҐГ­Гј 2 - lvl2
+	3) Г ) ГЅГ«ГҐГ¬ГҐГ­ГІГ Г¬ Г±Г«Г®Гї 3 ГЇГ°ГЁГ±ГўГ ГҐГІГ±Гї ГіГ­ГЁГЄГ Г«ГјГ­Г»Г© id, Г­Г ГЇГ°ГЁГ¬ГҐГ° id="lvl3b1" ГЈГ¤ГҐ lvl3 - ГіГ°Г®ГўГҐГ­Гј, Г  b1-b400 - id ГЄГ­Г®ГЇГЄГЁ. Г’Г ГЄГ¦ГҐ ГЇГ°ГЁГ±ГўГ ГЁГўГ ГҐГ¬ ГЄГ«Г Г±Г± Г®Г¤Г­Г®Г§Г­Г Г·Г­Г® ГіГЄГ Г§Г»ГўГ ГѕГ№ГЁГ© Г­Г  ГіГ°Г®ГўГҐГ­Гј 3 - lvl3
+		ГЎ) ГЅГ«ГҐГ¬ГҐГ­ГІГ Г¬ Г±Г«Г®Гї 3 ГЇГ°ГЁГ±ГўГ ГҐГІГ±Гї data-parent="lvl2b1" ГЈГ¤ГҐ lvl2b1 - id Г°Г®Г¤ГЁГІГҐГ«Гї. Г’Г ГЄГЁГ¬ Г®ГЎГ°Г Г§Г®Г¬ ГЇГ® ГЄГ«ГЁГЄГі Г­Г  Г°Г®Г¤ГЁГІГҐГ«Гї Г¬Г®Г¦Г­Г® Г®Г¤Г­Г®Г§Г­Г Г·Г­Г® ГўГ»ГЎГ°Г ГІГј ГҐГЈГ® ГЇГ®ГІГ®Г¬ГЄГ®Гў
+	4) Г ) ГЅГ«ГҐГ¬ГҐГ­ГІГ Г¬ Г±Г«Г®Гї 4 ГЇГ°ГЁГ±ГўГ ГЁГўГ ГҐГІГ±Гї ГіГ­ГЁГЄГ Г«ГјГ­Г»Г© id, Г­Г ГЇГ°ГЁГ¬ГҐГ° id="lvl4b1" ГЈГ¤ГҐ lvl2 - ГіГ°Г®ГўГҐГ­Гј, Г  b1-b400 - id ГЄГ­Г®ГЇГЄГЁ. Г’Г ГЄГ¦ГҐ ГЇГ°ГЁГ±ГўГ ГЁГўГ ГҐГ¬ ГЄГ«Г Г±Г± Г®Г¤Г­Г®Г§Г­Г Г·Г­Г® ГіГЄГ Г§Г»ГўГ ГѕГ№ГЁГ© Г­Г  ГіГ°Г®ГўГҐГ­Гј 4 - lvl4
+		ГЎ) ГЅГ«ГҐГ¬ГҐГ­ГІГ Г¬ Г±Г«Г®Гї 4 ГЇГ°ГЁГ±ГўГ ГҐГІГ±Гї data-parent="lvl3b1" ГЈГ¤ГҐ lvl2b1 - id Г°Г®Г¤ГЁГІГҐГ«Гї. Г’Г ГЄГЁГ¬ Г®ГЎГ°Г Г§Г®Г¬ ГЇГ® ГЄГ«ГЁГЄГі Г­Г  Г°Г®Г¤ГЁГІГҐГ«Гї Г¬Г®Г¦Г­Г® Г®Г¤Г­Г®Г§Г­Г Г·Г­Г® ГўГ»ГЎГ°Г ГІГј ГҐГЈГ® ГЇГ®ГІГ®Г¬ГЄГ®Гў
+	5) ГЇГ°ГЁ ГІГҐГЄГіГ№ГҐГ© Г±ГҐГІГЄГҐ 16*29 Г¬Г» ГЁГ¬ГҐГҐГ¬ 464 ГїГ·ГҐГ©ГЄГЁ
+	6) ГЇГ°ГЁ ГЄГ«ГЁГЄГҐ Г­Г  ГЄГ«Г Г±Г± ГіГ°Г®ГўГ­Гї 2:
+		Г ) ГўГ»Г§Г»ГўГ ГҐГ¬ ГґГіГ­ГЄГ¶ГЁГѕ, ГЄГ®ГІГ®Г°Г Гї Г±Г·ГЁГІГ»ГўГ ГҐГІ id ГЄГ«ГЁГЄГ­ГіГІГ®ГЈГ® ГЁ Г±Г°ГҐГ¤ГЁ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў ГіГ°Г®ГўГ­Гї 3 ГўГ»ГЎГЁГ°Г ГҐГІ ГІГҐ Гі ГЄГ®ГЈГ® data-parent = Г±Г·ГЁГІГ Г­Г­Г®Г¬Гі id 
+	7) ГЇГ°ГЁ ГЄГ«ГЁГЄГҐ Г­Г  ГЄГ«Г Г±Г± ГіГ°Г®ГўГ­Гї 3:
+		Г ) ГўГ»Г§Г»ГўГ ГҐГ¬ ГґГіГ­ГЄГ¶ГЁГѕ, ГЄГ®ГІГ®Г°Г Гї Г±Г·ГЁГІГ»ГўГ ГҐГІ id ГЄГ«ГЁГЄГ­ГіГІГ®ГЈГ® ГЁ Г±Г°ГҐГ¤ГЁ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў ГіГ°Г®ГўГ­Гї 4 ГўГ»ГЎГЁГ°Г ГҐГІ ГІГҐ Гі ГЄГ®ГЈГ® data-parent = Г±Г·ГЁГІГ Г­Г­Г®Г¬Гі id 
 -->		 
 <div id="alfabuttons">
 	
 	<span id="names"></span>
 
 	<!-- LAYER 1 - OSNOVNAYA BUTTON -->
-	<a class="lvl1 ltgcol1 ltgrow1 gexa a1clr-green" id="lvl1b1" data-titles="Домой" href="#" >
+	<a class="lvl1 ltgcol1 ltgrow1 gexa a1clr-green" id="lvl1b1" data-titles="Г„Г®Г¬Г®Г©" href="#" >
 		<div class="inner"><i class="fa fa-home" aria-hidden="true"></i></div>
 	</a>
 	
 	<!-- LAYER 2  -->
-	<a class="lvl2 ltgcol2 ltgrow2 gexa a1clr-orange" id="lvl2b1" data-titles="Каталог" href="#" >
+	<a class="lvl2 ltgcol2 ltgrow2 gexa a1clr-orange" id="lvl2b1" data-titles="ГЉГ ГІГ Г«Г®ГЈ" href="#" >
 		<div class="inner"><i class="fa fa-bars" aria-hidden="true"></i></div>
 	</a>
-	<a class="lvl2 ltgcol1 ltgrow3 gexa a1clr-red" id="lvl2b2" data-titles="Новости" href="#" >
+	<a class="lvl2 ltgcol1 ltgrow3 gexa a1clr-red" id="lvl2b2" data-titles="ГЌГ®ГўГ®Г±ГІГЁ" href="#" >
 		<div class="inner"><i class="fa fa-newspaper-o" aria-hidden="true"></i></div>
 	</a>
-	<a class="lvl2 ltgcol5 ltgrow1 gexa a1clr-verygreen" id="lvl2b3" data-titles="Статьи" href="#" >
+	<a class="lvl2 ltgcol5 ltgrow1 gexa a1clr-verygreen" id="lvl2b3" data-titles="Г‘ГІГ ГІГјГЁ" href="#" >
 		<div class="inner"><i class="fa fa-book" aria-hidden="true"></i></div>
 	</a>
-	<a class="lvl2 ltgcol4 ltgrow2 gexa a1clr-yellow" id="lvl2b4" data-titles="События" href="#" >
+	<a class="lvl2 ltgcol4 ltgrow2 gexa a1clr-yellow" id="lvl2b4" data-titles="Г‘Г®ГЎГ»ГІГЁГї" href="#" >
 		<div class="inner"><i class="fa fa-comment-o" aria-hidden="true"></i></div>
 	</a>
-	<a class="lvl2 ltgcol7 ltgrow1 gexa a1clr-bluelight" id="lvl2b5" data-titles="О компании" href="#" >
+	<a class="lvl2 ltgcol7 ltgrow1 gexa a1clr-bluelight" id="lvl2b5" data-titles="ГЋ ГЄГ®Г¬ГЇГ Г­ГЁГЁ" href="#" >
 		<div class="inner"><i class="fa fa-rocket" aria-hidden="true"></i></div>
 	</a>
 	<a class="lvl2 ltgcol8 ltgrow2 gexa a1clr-bluestrong" id="lvl2b6" data-titles="ICO" href="#" >
 		<div class="inner"><i class="fa fa-btc" aria-hidden="true"></i></div>
 	</a>
-	<a class="lvl2 ltgcol10 ltgrow2 gexa a1clr-black" id="lvl2b7" data-titles="Контакты" href="#" >
+	<a class="lvl2 ltgcol10 ltgrow2 gexa a1clr-black" id="lvl2b7" data-titles="ГЉГ®Г­ГІГ ГЄГІГ»" href="#" >
 		<div class="inner"><i class="fa fa-mobile" aria-hidden="true"></i></i></div>
 	</a>
 	
 	<!-- LAYER 3 - CHILD OF Layer2 -->
-	<a class="lvl3 ltgcol5 ltgrow3 gexa a1clr-grey" id="lvl3b1" data-titles="Ноутбуки" data-parent="lvl2b1" href="#" >
+	<a class="lvl3 ltgcol5 ltgrow3 gexa a1clr-grey" id="lvl3b1" data-titles="ГЌГ®ГіГІГЎГіГЄГЁ" data-parent="lvl2b1" href="#" >
 		<div class="inner"><i class="fa fa-laptop" aria-hidden="true"></i></i></div>
 	</a>
-	<a class="lvl3 ltgcol3 ltgrow3 gexa a1clr-grey" id="lvl3b2" data-titles="Телефоны" data-parent="lvl2b1" href="#" >
+	<a class="lvl3 ltgcol3 ltgrow3 gexa a1clr-grey" id="lvl3b2" data-titles="Г’ГҐГ«ГҐГґГ®Г­Г»" data-parent="lvl2b1" href="#" >
 		<div class="inner"><i class="fa fa-phone" aria-hidden="true"></i></i></div>
 	</a>
-	<a class="lvl3 ltgcol2 ltgrow4 gexa a1clr-grey" id="lvl3b3" data-titles="Настольные компьютеры" data-parent="lvl2b1" href="#" >
+	<a class="lvl3 ltgcol2 ltgrow4 gexa a1clr-grey" id="lvl3b3" data-titles="ГЌГ Г±ГІГ®Г«ГјГ­Г»ГҐ ГЄГ®Г¬ГЇГјГѕГІГҐГ°Г»" data-parent="lvl2b1" href="#" >
 		<div class="inner"><i class="fa fa-desktop" aria-hidden="true"></i></i></div>
 	</a>
-	<a class="lvl3 ltgcol1 ltgrow5 gexa a1clr-grey" id="lvl3b4" data-titles="Клавиатуры" data-parent="lvl2b1" href="#" >
+	<a class="lvl3 ltgcol1 ltgrow5 gexa a1clr-grey" id="lvl3b4" data-titles="ГЉГ«Г ГўГЁГ ГІГіГ°Г»" data-parent="lvl2b1" href="#" >
 		<div class="inner"><i class="fa fa-keyboard-o" aria-hidden="true"></i></i></div>
 	</a>
-	<a class="lvl3 ltgcol6 ltgrow2 gexa a1clr-grey" id="lvl3b5" data-titles="WiFi Роутеры" data-parent="lvl2b1" href="#" >
+	<a class="lvl3 ltgcol6 ltgrow2 gexa a1clr-grey" id="lvl3b5" data-titles="WiFi ГђГ®ГіГІГҐГ°Г»" data-parent="lvl2b1" href="#" >
 		<div class="inner"><i class="fa fa-wifi" aria-hidden="true"></i></div>
 	</a>
-	<a class="lvl3 ltgcol7 ltgrow3 gexa a1clr-grey" id="lvl3b6" data-titles="Телевизоры" data-parent="lvl2b1" href="#" >
+	<a class="lvl3 ltgcol7 ltgrow3 gexa a1clr-grey" id="lvl3b6" data-titles="Г’ГҐГ«ГҐГўГЁГ§Г®Г°Г»" data-parent="lvl2b1" href="#" >
 		<div class="inner"><i class="fa fa-television" aria-hidden="true"></i></div>
 	</a>
 	
-	<a class="lvl3 ltgcol9 ltgrow3 gexa a1clr-grey" id="lvl3b7" data-titles="Политика" data-parent="lvl2b2" href="#" >
+	<a class="lvl3 ltgcol9 ltgrow3 gexa a1clr-grey" id="lvl3b7" data-titles="ГЏГ®Г«ГЁГІГЁГЄГ " data-parent="lvl2b2" href="#" >
 		<div class="inner"><i class="fa fa-trash" aria-hidden="true"></i></i></div>
 	</a>
-	<a class="lvl3 ltgcol11 ltgrow3 gexa a1clr-grey" id="lvl3b8" data-titles="Экономика" data-parent="lvl2b2" href="#" >
+	<a class="lvl3 ltgcol11 ltgrow3 gexa a1clr-grey" id="lvl3b8" data-titles="ГќГЄГ®Г­Г®Г¬ГЁГЄГ " data-parent="lvl2b2" href="#" >
 		<div class="inner"><i class="fa fa-money" aria-hidden="true"></i></div>
 	</a>
-	<a class="lvl3 ltgcol12 ltgrow2 gexa a1clr-grey" id="lvl3b9" data-titles="Спорт" data-parent="lvl2b2" href="#" >
+	<a class="lvl3 ltgcol12 ltgrow2 gexa a1clr-grey" id="lvl3b9" data-titles="Г‘ГЇГ®Г°ГІ" data-parent="lvl2b2" href="#" >
 		<div class="inner"><i class="fa fa-futbol-o" aria-hidden="true"></i></i></div>
 	</a>
-	<a class="lvl3 ltgcol6 ltgrow4 gexa a1clr-grey" id="lvl3b10" data-titles="В мире" data-parent="lvl2b2" href="#" >
+	<a class="lvl3 ltgcol6 ltgrow4 gexa a1clr-grey" id="lvl3b10" data-titles="Г‚ Г¬ГЁГ°ГҐ" data-parent="lvl2b2" href="#" >
 		<div class="inner"><i class="fa fa-globe" aria-hidden="true"></i></div>
 	</a>
 	
 	
 	<!-- LAYER 4 - CHILD OF Layer3 -->
-	<a class="lvl4 ltgcol7 ltgrow5 gexa a1clr-red" id="lvl4b1" data-titles="Воронеж" data-parent="lvl3b10" href="#" >
+	<a class="lvl4 ltgcol7 ltgrow5 gexa a1clr-red" id="lvl4b1" data-titles="Г‚Г®Г°Г®Г­ГҐГ¦" data-parent="lvl3b10" href="#" >
 		<div class="inner"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
 	</a>
-	<a class="lvl4 ltgcol8 ltgrow6 gexa a1clr-red" id="lvl4b2" data-titles="Москва" data-parent="lvl3b10" href="#" >
+	<a class="lvl4 ltgcol8 ltgrow6 gexa a1clr-red" id="lvl4b2" data-titles="ГЊГ®Г±ГЄГўГ " data-parent="lvl3b10" href="#" >
 		<div class="inner"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
 	</a>
-	<a class="lvl4 ltgcol5 ltgrow5 gexa a1clr-red" id="lvl4b3" data-titles="Санкт-Петербург" data-parent="lvl3b10" href="#" >
+	<a class="lvl4 ltgcol5 ltgrow5 gexa a1clr-red" id="lvl4b3" data-titles="Г‘Г Г­ГЄГІ-ГЏГҐГІГҐГ°ГЎГіГ°ГЈ" data-parent="lvl3b10" href="#" >
 		<div class="inner"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
 	</a>
 
